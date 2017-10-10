@@ -20,7 +20,7 @@ def find(args):
                 elif args.type == 'f' and f.is_file():
                     find_exec(f, args)
         else:
-            print(f'Unknow type: {args.type}')
+            print(f"Unknow type: {args.type}")
 
     # Else All of file
     else:
@@ -29,7 +29,7 @@ def find(args):
 
 
 def find_print(f, args):
-    if args.print:
+    if args.print and args.start[0:2] == './' or '.':
         print(f"./{f}")
     else:
         print(f)
